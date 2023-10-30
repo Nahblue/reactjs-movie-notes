@@ -1,6 +1,6 @@
 import { Container } from "./styles"
 
-export function Tags({ title }) {
+export function Tag({ title }) {
   return(
     <Container>
       {title}
