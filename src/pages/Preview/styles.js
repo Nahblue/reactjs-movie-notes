@@ -32,7 +32,7 @@ export const Content = styled.div`
   > p {
     text-align: justify;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 22px;
     margin-bottom: 30px;
   }
 `
@@ -45,13 +45,13 @@ export const Title = styled.div`
   > h1 {
     font-size: 36px;
   }
+`
 
-  > div {
-    display: flex;
-    gap: 10px;
-    margin-left: 19px;
-    font-size: 24px;
-    color: ${({ theme }) => theme.COLORS.CORAL_100};
+export const Stars = styled.div`
+  margin-left: 19px;
+
+  > svg {
+  font-size: 24px;
   }
 `
 
@@ -60,6 +60,7 @@ export const Autor = styled.div`
   align-items: center;
   gap: 8px;
   font-size: 16px;
+  font-family: 'Roboto', sans-serif;
 
   > img {
     height: 16px;

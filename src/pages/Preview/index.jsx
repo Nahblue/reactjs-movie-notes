@@ -1,8 +1,9 @@
 import { BsArrowLeft } from "react-icons/bs"
-import { AiFillStar, AiOutlineStar, AiOutlineClockCircle } from "react-icons/ai"
-import { Container, Content, Title, Autor, Tags } from "./styles"
+import { AiOutlineClockCircle } from "react-icons/ai"
+import { Container, Content, Title, Autor, Tags, Stars } from "./styles"
 
 import { Header } from "../../components/Header"
+import { Star } from "../../components/Star"
 import { Tag } from "../../components/Tag"
 
 export function Preview() {
@@ -17,14 +18,11 @@ export function Preview() {
           </a>
           <Title>
             <h1>Interestellar</h1> 
+            
+            <Stars>
+              <Star />
+            </Stars>
 
-            <div>
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiOutlineStar />
-            </div>
           </Title>
 
           
