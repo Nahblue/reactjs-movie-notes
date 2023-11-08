@@ -1,8 +1,47 @@
-# React + Vite
+<h1 align="center"> Movies Notes </h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <a href="#-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-license">License</a>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=49AA26&labelColor=000000">
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<br>
+
+<p align="center">
+  <img alt="home movienotes" src="https://i.imgur.com/qsjVRaT.png" width="40%">
+  <img alt="criação de anotação movienotes" src="https://i.imgur.com/WsVGg1A.png" width="40%">
+  <img alt="detalhes movienotes" src="https://i.imgur.com/9nF5ngc.png" width="40%">
+  <img alt="perfil movienotes" src="https://i.imgur.com/GfZCOa7.png" width="40%">
+  <img alt="login movienotes" src="https://i.imgur.com/uk2jI4V.png" width="40%">
+  <img alt="nova conta movienotes" src="https://i.imgur.com/eFN8P7x.png" width="40%">
+</p>
+
+## 🚀 Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+
+- Javascript
+- React.js
+- Vite
+- Git e Github
+- Figma
+
+## 💻 Projeto
+
+Front-end da aplicação onde o usuário cadastra um filme, preenche com algumas informações (nome, descrição, nota) e cria tags relacionadas a ele. A aplicação possui 6 interfaces, página inicial, profile, detalhes da anotação de um filme, criação de uma nova anotação, login na aplicação e criação de conta.
+
+[Backend da aplicação](https://github.com/Nahblue/nodejs-movies-notes)
+
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT.
+
+---
+
+Feito com ♥ by Nahblue 😋
