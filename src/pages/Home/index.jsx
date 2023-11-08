@@ -13,7 +13,7 @@ export function Home() {
         <div>
           <h1>Meus filmes</h1>
           
-          <NewMovie>
+          <NewMovie to="/new" >
             <AiOutlinePlus />
             Adicionar filme
           </NewMovie>

@@ -4,15 +4,16 @@ import { BsArrowLeft } from "react-icons/bs"
 import { FiUser, FiMail, FiLock, FiCamera } from "react-icons/fi"
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
+import { Link } from "react-router-dom"
 
 export function Profile() {
   return (
     <Container>
       <header>
-        <a href="/">
+        <Link to="/" >
           <BsArrowLeft />
           Voltar
-        </a>
+        </Link>
       </header>
 
       <Form>

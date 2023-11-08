@@ -6,6 +6,7 @@ import { BsArrowLeft } from "react-icons/bs"
 import { TextArea } from "../../components/TextArea"
 import { MovieItem } from "../../components/MovieItem"
 import { Button } from "../../components/Button"
+import { Link } from "react-router-dom"
 
 export function New(){
   return(
@@ -15,10 +16,10 @@ export function New(){
       <main>
         <Form>
           <header>
-            <a href="/">
+            <Link to="/" >
               <BsArrowLeft />
               Voltar
-            </a>
+            </Link>
 
             <h1>Novo filme</h1>
           </header>

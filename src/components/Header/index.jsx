@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Container, Profile } from "./styles"
 
 export function Header() {
@@ -7,12 +8,14 @@ export function Header() {
 
       <input type="text" placeholder="Pesquisar pelo título" />
 
-      <Profile >
+      <Profile>
         <div>
-          <strong>Ana Paula</strong>
+          <Link to="/profile" >
+            <strong>Ana Paula</strong>
+          </Link>
           <a href="#">sair</a>
         </div>
-
+      
         <img 
           src="https://github.com/Nahblue.png" 
           alt="imagem do usuário" 

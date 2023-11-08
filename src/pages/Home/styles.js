@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "react-router-dom" 
 
 export const Container = styled.div`
   width: 100%;
@@ -25,8 +26,7 @@ export const Content = styled.div`
   }
 `
 
-export const NewMovie = styled.button`
-  border: none;
+export const NewMovie = styled(Link)`
   border-radius: 8px;
   padding: 12px 32px;
 
