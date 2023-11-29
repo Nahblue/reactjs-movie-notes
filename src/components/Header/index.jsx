@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom"
+import { useAuth } from "../../hooks/auth"
 import { Container, Profile } from "./styles"
 
 export function Header() {
+  const { signOut } = useAuth()
+
   return(
     <Container>
       <h1>RocketMovies</h1>
@@ -13,7 +16,7 @@ export function Header() {
           <Link to="/profile" >
             <strong>Ana Paula</strong>
           </Link>
-          <a href="#">sair</a>
+          <button onClick={signOut}>sair</button>
         </div>
       
         <img 
