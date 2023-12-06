@@ -36,6 +36,10 @@ export function New(){
       return alert("Digite o título e a nota do filme.")
     }
 
+    if (rating > 5 || (rating % 2 !== 0)) {
+      return alert("Digite uma nota de 0 à 5.")
+    }
+
     if(newTag) {
       return alert("Existem tags não adicionadas. Clique em adicionar ou deixe o campo vazio.")
     }
@@ -48,10 +52,6 @@ export function New(){
     })
 
     alert("Nota criada com sucesso!")
-    navigate("/")
-  }
-
-  function handleDeleteMovie() {
     navigate("/")
   }
 
@@ -76,8 +76,9 @@ export function New(){
               onChange={e => setTitle(e.target.value)}
             />
             <Input 
+              type="number"
               placeholder="Sua nota(de 0 a 5)" 
-              onChange={e => setRating(e.target.value)}
+              onChange={e => setRating(Number(e.target.value))}
             />
           </section>
           
@@ -109,10 +110,8 @@ export function New(){
             />
           </Tags>
 
-          <section>
-            <Button title="Excluir filme" onClick={handleDeleteMovie} />
-            <Button title="Salvar alterações" onClick={handleNewNote} />
-          </section>
+          <Button title="Salvar alterações" onClick={handleNewNote} />
+
         </Form>
       </main>
     </Container>

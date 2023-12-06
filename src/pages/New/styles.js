@@ -43,11 +43,6 @@ export const Form = styled.form`
     gap: 40px;
 
     margin-bottom: 40px;
-
-    button:nth-child(1) {
-      background-color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
-      color: ${({ theme }) => theme.COLORS.CORAL_100};
-    }
   }
 
   > h2 {

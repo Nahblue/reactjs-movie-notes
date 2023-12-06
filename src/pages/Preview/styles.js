@@ -23,11 +23,23 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
 
-  > a {
-    color: ${({ theme }) => theme.COLORS.CORAL_100};
+  > section {
     display: flex;
-    gap: 8px;
+    justify-content: space-between;
+
+    a {
+      color: ${({ theme }) => theme.COLORS.CORAL_100};
+      display: flex;
+      gap: 8px;
+    }
+
+    button {
+      background: none;
+      border: none;
+      color: ${({ theme }) => theme.COLORS.CORAL_100};
+    }
   }
+
 
   > p {
     text-align: justify;

@@ -6,6 +6,7 @@ const AuthContext = createContext({})
 function AuthProvider({ children }) {
 
   const [ data, setData ] = useState("")
+  const [ notes, setNotes] = useState([])
 
   async function signIn({ email, password }) {
     try{
@@ -59,6 +60,11 @@ function AuthProvider({ children }) {
     }
   }
 
+  async function fetchMovieNotes(search){
+    const response = await api.get(`/notes?title=${search}`)
+    setNotes(response.data)
+  }
+
   useEffect(() => {
     const token = localStorage.getItem("@movienotes:token")
     const user = localStorage.getItem("@movienotes:user")
@@ -78,7 +84,9 @@ function AuthProvider({ children }) {
       signIn, 
       signOut,
       updateProfile,
-      user: data.user
+      fetchMovieNotes,
+      user: data.user,
+      searchNotes: notes
     }}>
       {children}
     </AuthContext.Provider>

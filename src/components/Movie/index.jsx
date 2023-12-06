@@ -5,11 +5,11 @@ import { Tag } from "../Tag"
 
 export function Movie({ data, ...rest}) {
   return(
-    <Container>
+    <Container {...rest}>
       <h1>{data.title}</h1>
 
       <Stars>
-        <Star />
+        <Star rating={data.rating} />
       </Stars>
 
       <p>{data.text}</p>
