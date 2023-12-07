@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useParams, useNavigate } from "react-router-dom"
 import { BsArrowLeft } from "react-icons/bs"
 import { AiOutlineClockCircle } from "react-icons/ai"
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
 
 import { Container, Content, Title, Autor, Tags, Stars } from "./styles"
 
@@ -51,12 +52,12 @@ export function Preview() {
         <main>
         <Content>
           <section>
-            <a onClick={handleBack}>
-            <BsArrowLeft />
-            <span>Voltar</span>
-          </a>
+            <button onClick={handleBack}>
+              <BsArrowLeft />
+              <span>Voltar</span>
+            </button>
 
-          <button onClick={handleRemove}>Excluir nota</button>
+            <button onClick={handleRemove}>Excluir nota</button>
           </section>
           <Title>
             <h1>{data.title}</h1> 

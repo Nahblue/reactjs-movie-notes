@@ -13,7 +13,9 @@ export const Container = styled.div`
     align-items: center;
     padding: 0 144px;
     
-    a {
+    button {
+      background: none;
+      border: none;
       color: ${({ theme }) => theme.COLORS.CORAL_100};
       font-size: 16px;
     }

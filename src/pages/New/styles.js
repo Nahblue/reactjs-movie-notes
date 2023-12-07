@@ -22,7 +22,9 @@ export const Form = styled.form`
   > header {
     margin-bottom: 40px;
 
-    a {
+    button {
+      background: none;
+      border: none;
       font-size: 16px;
       color: ${({ theme }) => theme.COLORS.CORAL_100};
 

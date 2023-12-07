@@ -27,16 +27,12 @@ export const Content = styled.div`
     display: flex;
     justify-content: space-between;
 
-    a {
-      color: ${({ theme }) => theme.COLORS.CORAL_100};
-      display: flex;
-      gap: 8px;
-    }
-
     button {
       background: none;
       border: none;
       color: ${({ theme }) => theme.COLORS.CORAL_100};
+      display: flex;
+      gap: 8px;
     }
   }
 
@@ -78,6 +74,7 @@ export const Autor = styled.div`
     height: 16px;
     width: 16px;
     border-radius: 50%;
+    object-fit: cover;
   }
 
   > svg {

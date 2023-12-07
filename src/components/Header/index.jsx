@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import { useAuth } from "../../hooks/auth"
 import { api } from "../../services/api"
+import avatarPlaceholder from "../../assets/avatar_placeholder.svg"
+import { useNavigate } from "react-router-dom"
 
 import { Container, Profile } from "./styles"
 
@@ -11,6 +13,13 @@ export function Header() {
   const { signOut, user, fetchMovieNotes } = useAuth()
 
   const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder
+
+  const navigate = useNavigate()
+
+  function handleSignOut() {
+    navigate("/")
+    signOut()
+  }
 
   useEffect(()=>{
     fetchMovieNotes(search)
@@ -32,7 +41,7 @@ export function Header() {
           <Link to="/profile" >
             <strong>{user.name}</strong>
           </Link>
-          <button onClick={signOut}>sair</button>
+          <button onClick={handleSignOut}>sair</button>
         </div>
       
         <img 

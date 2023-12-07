@@ -22,6 +22,10 @@ export function New(){
 
   const navigate = useNavigate()
 
+  function handleBack() {
+    navigate(-1)
+  }
+
   function handleAddTag() {
     setTags(prevState => [...prevState, newTag])
     setNewTag("")
@@ -36,7 +40,7 @@ export function New(){
       return alert("Digite o título e a nota do filme.")
     }
 
-    if (rating > 5 || (rating % 2 !== 0)) {
+    if (rating > 5 || !Number.isInteger(rating)) {
       return alert("Digite uma nota de 0 à 5.")
     }
 
@@ -52,7 +56,7 @@ export function New(){
     })
 
     alert("Nota criada com sucesso!")
-    navigate("/")
+    navigate(-1)
   }
 
   return(
@@ -62,10 +66,10 @@ export function New(){
       <main>
         <Form>
           <header>
-            <Link to="/" >
+            <button onClick={handleBack}>
               <BsArrowLeft />
               Voltar
-            </Link>
+            </button>
 
             <h1>Novo filme</h1>
           </header>
