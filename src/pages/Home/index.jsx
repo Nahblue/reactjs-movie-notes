@@ -1,4 +1,5 @@
-import { useAuth } from "../../hooks/auth"
+import { useEffect, useState } from "react"
+import { api } from "../../services/api"
 import { useNavigate } from "react-router-dom"
 
 import { Container, Content, NewMovie } from "./styles"
@@ -8,7 +9,7 @@ import { Header } from "../../components/Header"
 import { Movie } from "../../components/Movie"
 
 export function Home() {
-  const { searchNotes } = useAuth()
+  const [ notes, setNotes ] = useState([])
 
   const navigate = useNavigate()
 
@@ -16,6 +17,15 @@ export function Home() {
     navigate(`/preview/${id}`)
   }
 
+  useEffect(() => {
+    async function fetchNotes(){
+      const response = await api.get(`/notes?title=`)
+      setNotes(response.data)
+    }
+
+    fetchNotes()
+  }, [])
+  
   return(
     <Container>
       <Header />
@@ -31,7 +41,7 @@ export function Home() {
         </div>
 
         {
-          searchNotes.map(note => (
+          notes.map(note => (
             <Movie 
               key={note.id}
               onClick={() => handlePreview(note.id)}

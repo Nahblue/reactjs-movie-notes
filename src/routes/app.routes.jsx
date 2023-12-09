@@ -4,6 +4,7 @@ import { New } from "../pages/New"
 import { Home } from "../pages/Home"
 import { Preview } from "../pages/Preview"
 import { Profile } from "../pages/Profile"
+import { Search } from "../pages/Search"
 
 export function AppRoutes() {
   return(
@@ -12,8 +13,9 @@ export function AppRoutes() {
       <Route path="/new" element={<New />} />
       <Route path="/profile" element={<Profile />} />
       <Route path="/preview/:id" element={<Preview />} />
+      <Route path="/search" element={<Search />} />
 
-      {/* <Route path='*' element={<Navigate to="/" />}/> */}
+      <Route path='*' element={<Navigate to="/" />}/>
     </Routes>
   )
 }

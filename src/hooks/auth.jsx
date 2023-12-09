@@ -86,7 +86,7 @@ function AuthProvider({ children }) {
       updateProfile,
       fetchMovieNotes,
       user: data.user,
-      searchNotes: notes
+      filteredNotes: notes
     }}>
       {children}
     </AuthContext.Provider>

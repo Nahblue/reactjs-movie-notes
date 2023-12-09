@@ -16,11 +16,12 @@ export const Container = styled.header`
 
   padding: 24px 123px;
 
-  > h1 {
+  > a {
     font-size: 24px;
     font-weight: 700;
-    color: ${({ theme }) => theme.COLORS.CORAL_100};
+    color: ${({ theme }) => theme.COLORS.CORAL_100}
   }
+
 
   > input {
     width: 630px;

@@ -21,19 +21,28 @@ export function Header() {
     signOut()
   }
 
-  useEffect(()=>{
-    fetchMovieNotes(search)
-  }, [search])
+  function handleKeyDown(e) {
+    if(e.keyCode === 13) {
+      if(search === "") {
+        return
+      }
 
+      fetchMovieNotes(search)
+      navigate("/search")
+    } else {
+      return
+    }
+  }
 
   return(
     <Container>
-      <h1>RocketMovies</h1>
+      <Link to="/">RocketMovies</Link>
 
       <input 
         type="text" 
         placeholder="Pesquisar pelo título"
         onChange={e => setSearch(e.target.value)} 
+        onKeyDown={handleKeyDown}
       />
 
       <Profile>
