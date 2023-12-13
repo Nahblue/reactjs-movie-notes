@@ -33,8 +33,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 
-Front-end da aplicação onde o usuário cadastra um filme, preenche com algumas informações (nome, descrição, nota) e cria tags relacionadas a ele. A aplicação possui 6 interfaces, página inicial, profile, detalhes da anotação de um filme, criação de uma nova anotação, login na aplicação e criação de conta.
+Front-end da aplicação onde o usuário cadastra um filme, preenche com algumas informações (nome, descrição, nota) e cria tags relacionadas a ele. A aplicação possui 7 interfaces, página inicial, profile, detalhes da anotação de um filme, criação de uma nova anotação, pesquisa de anotações, login na aplicação e criação de conta.
 
+[Aplicação online](https://movie-notes-explorer11.netlify.app) <br />
 [Backend da aplicação](https://github.com/Nahblue/nodejs-movies-notes)
 
 
